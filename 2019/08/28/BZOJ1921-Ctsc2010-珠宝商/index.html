@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>BZOJ1921 [Ctsc2010]珠宝商 | Ratexxxx</title>
+  
+  
+  <meta name="description" content="可以的">
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="Ratexxxx">
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/images/webicon.png">
+  
+
+  
+    <link rel="stylesheet" href="/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <header class="l_header pure">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="pure"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          Ratexxxx
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-grin fa-fw'></i>&nbsp;recent
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="categories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;Categories
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="tags">
+									<i class='fas fa-hashtag fa-fw'></i>&nbsp;Tags
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="archives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;archieves
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/about/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="about">
+									<i class='fas fa-info-circle fa-fw'></i>&nbsp;about
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-grin fa-fw'></i>&nbsp;recent
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/categories/"
+                
+                  rel="nofollow"
+                
+                
+                id="categories">
+								<i class='fas fa-folder-open fa-fw'></i>&nbsp;Categories
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/tags/"
+                
+                  rel="nofollow"
+                
+                
+                id="tags">
+								<i class='fas fa-hashtag fa-fw'></i>&nbsp;Tags
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="archives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;Archives
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;about
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/2019/08/28/BZOJ1921-Ctsc2010-珠宝商/">
+        BZOJ1921 [Ctsc2010]珠宝商
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="http://ratexxxx.github.io" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>Ratexxxx</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-08-28</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/数据结构/点分治/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>数据结构&nbsp;/&nbsp;字符串&nbsp;/&nbsp;后缀自动机&nbsp;/&nbsp;后缀树&nbsp;/&nbsp;点分治</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          <blockquote>
+<p>题目链接<a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1921" target="_blank" rel="noopener">BZOJ1921</a></p>
+</blockquote>
+<h1><span id="solution">Solution</span></h1><p>本题综合利用后缀自动机的呀</p>
+<p>首先第一想法是怎么写暴力，从每个点为起点开始想下走，同时在SAM上走DAG，对于树上的每走到一个点，把答案加上其SAM对应节点的endpos大小即可，复杂度$ O(n^2) $</p>
+<p>然后看到这种统计路径的题，回想到点分和DSU，先试试点分，那么需要做的是统计以经过某个点x的路径的贡献，假设这条路径是$ u \to x \to v $<br>点分的一般思路，如果可以单独算出$ u \to x $和$ x \to v $，那么拼在一起就好了<br>但是如何拼在一起呢<br>考虑可以在M串上统计，每个u到x在匹配的位置上加一个标记，那么最后的答案就是每个位置 向前匹配的标记和*向后匹配的标记和 之和<br>发现上面说的两种路径其中一种可以变成反串上的另一种，因此只需考虑一种就可以</p>
+<p>然后就要求后缀自动机理解透彻了<br>网上的题解都说要在后缀树上统计$ u \to x $的路径贡献<br>然后我就想，为什么还要搞后缀树，直接在DAG上统计$ x \to v $的贡献不就可以啦，每次在后面加一个字符，方法同第一种暴力一样啊<br>然而在网上找不到这种做法，于是我就手画了好多后缀自动机和后缀树（因为画挂了很多次），然后找到了原因<br>如果我们走DAG来计算贡献，那么走到一个点时，要计入的是以$ x…v $为前缀的串的个数，但在DAG上走到一个位置，这个节点代表的字串可以有在$x…v$前面加了几个字符，然后就不满足要求了，但我们同样会计入答案。也就是说这样会统计多<br>但如果在后缀树上统计$ u \to x $，那么每次是在前面加一个字符，需要向儿子走，但可以保证之后走到的每一个点代表的所有串都是以$ u…x $为后缀的，就是当且仅当的意思，所以可以正确统计<br>这个还是要搞张图看看啊</p>
+<p>后缀自动机一个重要性质：自动机的par树即是其反串的后缀树（所以par树也叫前缀树，前缀树是反串的后缀树，多好）<br>然后建后缀树时记录一下每个点到其儿子走的是哪个字符的转移边</p>
+<p>这样点分的做法就完善了，由于在每个分治点都要在后缀树上将标记推到儿子并统计，复杂度是$ O(nlogn + nm) $，后面一部分成了瓶颈</p>
+<p>前人想出了一个很神仙的操作，我们发现第一个解法（暴力）复杂度与m无关，因此可以考虑当分治的子树大小低于某个值时直接暴力统计即可<br>当这个值设为$ \sqrt n $时最优，复杂度可以控制在$ O((n + m)\sqrt n) $</p>
+<p>写在最后<br>后缀系列算法真的好神啊，后缀自动机和后缀树的坑好深啊<br>主要是有各种各样的性质，互相转换又即为方便<br>然后通过这道题我还练熟了手画自动机[滑稽]</p>
+<a id="more"></a>
+<h1><span id="code">Code</span></h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> rep(i, a, b) for(int i(a), i##_ORZ(b); i &lt;= i##_ORZ; i++)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> drep(i, a, b) for(int i(a), i##_ORZ(b); i &gt;= i##_ORZ; i--)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">200010</span>;</span><br><span class="line"><span class="keyword">char</span> tr[maxn], eg[maxn];</span><br><span class="line"><span class="keyword">int</span> n, m, head[maxn], ver[maxn], Next[maxn], tot, totsz, mn, rt, sz[maxn], v[maxn], B;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123; ver[++tot] = y, Next[tot] = head[x], head[x] = tot; &#125;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SAM</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> par[maxn], ch[maxn][<span class="number">30</span>], val[maxn], cnt, las, rt;</span><br><span class="line">	<span class="keyword">int</span> sz[maxn], pos[maxn], nxt[maxn][<span class="number">30</span>], c[maxn], A[maxn], nod[maxn], sum[maxn];</span><br><span class="line">	<span class="keyword">char</span> S[maxn];</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">extend</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> po)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> p = las, np = ++cnt; nod[po] = np;</span><br><span class="line">		val[np] = val[p] + <span class="number">1</span>; sz[np] = <span class="number">1</span>; pos[np] = po;</span><br><span class="line">		<span class="keyword">while</span>(p &amp;&amp; !ch[p][x]) ch[p][x] = np, p = par[p];</span><br><span class="line">		<span class="keyword">if</span>(!p) par[np] = rt;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">int</span> q = ch[p][x];</span><br><span class="line">			<span class="keyword">if</span>(val[q] == val[p] + <span class="number">1</span>) par[np] = q;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				<span class="keyword">int</span> nq = ++cnt; val[nq] = val[p] + <span class="number">1</span>;</span><br><span class="line">				<span class="built_in">memcpy</span>(ch[nq], ch[q], <span class="keyword">sizeof</span>(ch[nq]));</span><br><span class="line">				par[nq] = par[q];</span><br><span class="line">				par[q] = par[np] = nq;</span><br><span class="line">				<span class="keyword">while</span>(p &amp;&amp; ch[p][x] == q) ch[p][x] = nq, p = par[p];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		las = np;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		cnt = rt = las = <span class="number">1</span>;</span><br><span class="line">		rep(i, <span class="number">1</span>, m) extend(S[i] - <span class="string">'a'</span>, i);</span><br><span class="line">		rep(i, <span class="number">1</span>, cnt) c[val[i]]++;</span><br><span class="line">		rep(i, <span class="number">1</span>, m) c[i] += c[i<span class="number">-1</span>];</span><br><span class="line">		rep(i, <span class="number">1</span>, cnt) A[c[val[i]]--] = i;</span><br><span class="line">		drep(i, cnt, <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">int</span> x = A[i];</span><br><span class="line">			sz[par[x]] += sz[x]; </span><br><span class="line">			<span class="keyword">if</span>(!pos[par[x]]) pos[par[x]] = pos[x];</span><br><span class="line">			nxt[par[x]][S[pos[x] - val[par[x]]] - <span class="string">'a'</span>] = x;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		rep(i, <span class="number">1</span>, cnt) sum[i] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		rep(i, <span class="number">1</span>, cnt) sum[A[i]] += sum[par[A[i]]];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">match</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> pa, <span class="keyword">int</span> cur, <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(len == val[cur]) cur = nxt[cur][tr[x] - <span class="string">'a'</span>];</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(S[pos[cur] - len] != tr[x]) cur = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(!cur) <span class="keyword">return</span>;</span><br><span class="line">		len++; sum[cur]++;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = head[x]; i; i = Next[i]) <span class="keyword">if</span>(ver[i] != pa &amp;&amp; !v[ver[i]])</span><br><span class="line">			match(ver[i], x, cur, len);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;sam[<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getroot</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> pa)</span> </span>&#123;</span><br><span class="line">	sz[x] = <span class="number">1</span>; <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = head[x]; i; i = Next[i]) <span class="keyword">if</span>(ver[i] != pa &amp;&amp; !v[ver[i]]) &#123;</span><br><span class="line">		getroot(ver[i], x);</span><br><span class="line">		sz[x] += sz[ver[i]];</span><br><span class="line">		res = max(res, sz[ver[i]]);</span><br><span class="line">	&#125;</span><br><span class="line">	res = max(res, totsz - sz[x]);</span><br><span class="line">	<span class="keyword">if</span>(res &lt; mn) rt = x, mn = res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">calc</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> pa, <span class="keyword">int</span> cur)</span> </span>&#123;</span><br><span class="line">	cur = sam[<span class="number">0</span>].ch[cur][tr[x] - <span class="string">'a'</span>];</span><br><span class="line">	<span class="keyword">if</span>(!cur) <span class="keyword">return</span>;</span><br><span class="line">	ans += sam[<span class="number">0</span>].sz[cur];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = head[x]; i; i = Next[i]) <span class="keyword">if</span>(ver[i] != pa &amp;&amp; !v[ver[i]])</span><br><span class="line">		calc(ver[i], x, cur);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">brute</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> pa)</span> </span>&#123;</span><br><span class="line">	calc(x, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = head[x]; i; i = Next[i]) <span class="keyword">if</span>(ver[i] != pa &amp;&amp; !v[ver[i]])</span><br><span class="line">		brute(ver[i], x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	sam[<span class="number">0</span>].clear(); sam[<span class="number">1</span>].clear();</span><br><span class="line">	sam[<span class="number">0</span>].match(x, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>); sam[<span class="number">0</span>].pushdown();</span><br><span class="line">	sam[<span class="number">1</span>].match(x, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>); sam[<span class="number">1</span>].pushdown();</span><br><span class="line">	rep(i, <span class="number">1</span>, m) ans += <span class="number">1l</span>l * sam[<span class="number">0</span>].sum[sam[<span class="number">0</span>].nod[i]] * sam[<span class="number">1</span>].sum[sam[<span class="number">1</span>].nod[m - i + <span class="number">1</span>]];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Delete</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> pa)</span> </span>&#123;</span><br><span class="line">	sam[<span class="number">0</span>].clear(); sam[<span class="number">1</span>].clear();</span><br><span class="line">	sam[<span class="number">0</span>].match(x, <span class="number">0</span>, sam[<span class="number">0</span>].ch[<span class="number">1</span>][tr[pa] - <span class="string">'a'</span>], <span class="number">1</span>); sam[<span class="number">0</span>].pushdown();</span><br><span class="line">	sam[<span class="number">1</span>].match(x, <span class="number">0</span>, sam[<span class="number">1</span>].ch[<span class="number">1</span>][tr[pa] - <span class="string">'a'</span>], <span class="number">1</span>); sam[<span class="number">1</span>].pushdown();</span><br><span class="line">	rep(i, <span class="number">1</span>, m) ans -= <span class="number">1l</span>l * sam[<span class="number">0</span>].sum[sam[<span class="number">0</span>].nod[i]] * sam[<span class="number">1</span>].sum[sam[<span class="number">1</span>].nod[m - i + <span class="number">1</span>]];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getsz</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> pa)</span> </span>&#123;</span><br><span class="line">	sz[x] = <span class="number">1</span>; </span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = head[x]; i; i = Next[i]) <span class="keyword">if</span>(!v[ver[i]] &amp;&amp; ver[i] != pa) </span><br><span class="line">		getsz(ver[i], x), sz[x] += sz[ver[i]];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">DFS</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(totsz &lt;= B) &#123; brute(x, <span class="number">0</span>); <span class="keyword">return</span>; &#125;</span><br><span class="line">	Insert(x); v[x] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = head[x]; i; i = Next[i]) <span class="keyword">if</span>(!v[ver[i]]) Delete(ver[i], x);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = head[x]; i; i = Next[i]) <span class="keyword">if</span>(!v[ver[i]]) &#123;</span><br><span class="line">		getsz(ver[i], x);</span><br><span class="line">		totsz = mn = sz[ver[i]];</span><br><span class="line">		getroot(ver[i], x);</span><br><span class="line">		DFS(rt);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m);</span><br><span class="line">	rep(i, <span class="number">1</span>, n - <span class="number">1</span>) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x, &amp;y), add(x, y), add(y, x);</span><br><span class="line">	B = <span class="built_in">ceil</span>(<span class="built_in">sqrt</span>(n));</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%s%s"</span>, tr + <span class="number">1</span>, eg + <span class="number">1</span>);</span><br><span class="line">	m = <span class="built_in">strlen</span>(eg + <span class="number">1</span>);</span><br><span class="line">	rep(i, <span class="number">1</span>, m) sam[<span class="number">0</span>].S[i] = eg[i], sam[<span class="number">1</span>].S[m - i + <span class="number">1</span>] = eg[i];</span><br><span class="line">	sam[<span class="number">0</span>].build(); sam[<span class="number">1</span>].build();</span><br><span class="line">	totsz = mn = n; </span><br><span class="line">	getroot(<span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">	DFS(rt);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <hr>
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-08-30T20:25:12+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>last updated at Aug 30, 2019</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/后缀自动机/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>后缀自动机</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/后缀树/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>后缀树</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/点分治/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;<p>点分治</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous</h6>
+                            <h4>
+                                <a href="/2019/08/31/BZOJ1062-NOI2008-糖果雨/" rel="prev" title="BZOJ1062 [NOI2008]糖果雨">
+                                  
+                                      BZOJ1062 [NOI2008]糖果雨
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/树状数组/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>树状数组</a> <a class="tag" href="/tags/数形转换/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>数形转换</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/08/28/BZOJ1920-Ctsc2010-产品销售/" rel="prev" title="BZOJ1920 [Ctsc2010]产品销售">
+                                    
+                                        BZOJ1920 [Ctsc2010]产品销售
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/费用流/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>费用流</a> <a class="tag" href="/tags/线段树/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>线段树</a> <a class="tag" href="/tags/模拟/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>模拟</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;Comments</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+  <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX","TeX"],
+      linebreaks: { automatic:true },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" },
+      noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+      Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+  });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += (all[i].SourceElement().parentNode.className ? ' ' : '') + 'has-jax';
+    }
+  });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+  <script>
+    window.subData = {
+      title: 'BZOJ1921 [Ctsc2010]珠宝商',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+        
+          
+          
+            <section class='widget author'>
+  <div class='content pure'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='/images/head-image.jpeg'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">Ratexxxx</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:482933891@qq.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/Ratexxxx/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget toc-wrapper'>
+    
+<header class='pure'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;TOC</div>
+  
+    <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class='content pure'>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#null"><span class="toc-text">Code</span></a></li></ol>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            <section class='widget grid'>
+  
+<header class='pure'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;guiding</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          recent
+        </a></li>
+      
+        <li><a class="flat-box" title="/archives/" href="/archives/"
+          
+            rel="nofollow"
+          
+          
+          id="archives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          archieves
+        </a></li>
+      
+        <li><a class="flat-box" title="/friends/" href="/friends/"
+          
+            rel="nofollow"
+          
+          
+          id="friends">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          friends
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          about
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            <section class='widget plain'>
+  
+<header class='pure'>
+  <div><i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;一言（ヒトコト）</div>
+  
+</header>
+
+  <div class='content pure'>
+    <p style="text-align:center;font-size:14px;color:#7d7d80" id="hitokoto">loading...</p>>
+      <script>fetch('https://v1.hitokoto.cn/')
+        .then(function (res){return res.json();})
+        .then(function (data) {
+          var hitokoto = document.getElementById('hitokoto');
+          hitokoto.innerText = data.hitokoto;
+          hitokoto.innerText += "\n——" + data.from;
+        })
+        .catch(function (err) {console.error(err);})
+      </script>
+  </div>
+</section>
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Categories</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/categories/"
+    title="/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/codeforces/" href="/categories/codeforces/"><div class='name'>codeforces</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/其他/" href="/categories/其他/"><div class='name'>其他</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/其他/性质/" href="/categories/其他/性质/"><div class='name'>性质</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/动态规划/" href="/categories/动态规划/"><div class='name'>动态规划</div><div class='badge'>(12)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/决策单调性优化/" href="/categories/动态规划/决策单调性优化/"><div class='name'>决策单调性优化</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/凸包/" href="/categories/动态规划/凸包/"><div class='name'>凸包</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/区间dp/" href="/categories/动态规划/区间dp/"><div class='name'>区间dp</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/单调队列优化/" href="/categories/动态规划/单调队列优化/"><div class='name'>单调队列优化</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/数据结构优化/" href="/categories/动态规划/数据结构优化/"><div class='name'>数据结构优化</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/斜率优化/" href="/categories/动态规划/斜率优化/"><div class='name'>斜率优化</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/树形dp/" href="/categories/动态规划/树形dp/"><div class='name'>树形dp</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/状压dp/" href="/categories/动态规划/状压dp/"><div class='name'>状压dp</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/背包dp/" href="/categories/动态规划/背包dp/"><div class='name'>背包dp</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/动态规划/计数dp/" href="/categories/动态规划/计数dp/"><div class='name'>计数dp</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/图论/" href="/categories/图论/"><div class='name'>图论</div><div class='badge'>(8)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/图论/2-sat/" href="/categories/图论/2-sat/"><div class='name'>2-sat</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/图论/二分图匹配/" href="/categories/图论/二分图匹配/"><div class='name'>二分图匹配</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/图论/染色/" href="/categories/图论/染色/"><div class='name'>染色</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/图论/网络流/" href="/categories/图论/网络流/"><div class='name'>网络流</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/图论/补图/" href="/categories/图论/补图/"><div class='name'>补图</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/字符串/" href="/categories/字符串/"><div class='name'>字符串</div><div class='badge'>(10)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/字符串/AC自动机/" href="/categories/字符串/AC自动机/"><div class='name'>AC自动机</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/字符串/Trie/" href="/categories/字符串/Trie/"><div class='name'>Trie</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/字符串/manachar/" href="/categories/字符串/manachar/"><div class='name'>manachar</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/字符串/后缀数组/" href="/categories/字符串/后缀数组/"><div class='name'>后缀数组</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/字符串/后缀树/" href="/categories/字符串/后缀树/"><div class='name'>后缀树</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/字符串/后缀自动机/" href="/categories/字符串/后缀自动机/"><div class='name'>后缀自动机</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数学/" href="/categories/数学/"><div class='name'>数学</div><div class='badge'>(16)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/Burnside引理/" href="/categories/数学/Burnside引理/"><div class='name'>Burnside引理</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/多项式/" href="/categories/数学/多项式/"><div class='name'>多项式</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/拉格朗日插值/" href="/categories/数学/拉格朗日插值/"><div class='name'>拉格朗日插值</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/数论/" href="/categories/数学/数论/"><div class='name'>数论</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/斯特林数/" href="/categories/数学/斯特林数/"><div class='name'>斯特林数</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/杜教筛/" href="/categories/数学/杜教筛/"><div class='name'>杜教筛</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/概率/" href="/categories/数学/概率/"><div class='name'>概率</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/组合/" href="/categories/数学/组合/"><div class='name'>组合</div><div class='badge'>(5)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数学/莫比乌斯反演/" href="/categories/数学/莫比乌斯反演/"><div class='name'>莫比乌斯反演</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数据结构/" href="/categories/数据结构/"><div class='name'>数据结构</div><div class='badge'>(13)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数据结构/LCT/" href="/categories/数据结构/LCT/"><div class='name'>LCT</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数据结构/单调栈/" href="/categories/数据结构/单调栈/"><div class='name'>单调栈</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数据结构/可持久化/" href="/categories/数据结构/可持久化/"><div class='name'>可持久化</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数据结构/树状数组/" href="/categories/数据结构/树状数组/"><div class='name'>树状数组</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数据结构/树链剖分/" href="/categories/数据结构/树链剖分/"><div class='name'>树链剖分</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数据结构/点分治/" href="/categories/数据结构/点分治/"><div class='name'>点分治</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数据结构/线段树/" href="/categories/数据结构/线段树/"><div class='name'>线段树</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box child" title="/categories/数据结构/长链剖分/" href="/categories/数据结构/长链剖分/"><div class='name'>长链剖分</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/注意点/" href="/categories/注意点/"><div class='name'>注意点</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/百合丛中过/" href="/categories/百合丛中过/"><div class='name'>百合丛中过</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/纪念日/" href="/categories/纪念日/"><div class='name'>纪念日</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/集训/" href="/categories/集训/"><div class='name'>集训</div><div class='badge'>(4)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+          
+        
+      
+        
+          
+          
+            
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Hot Tags</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/tags/"
+    title="/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/2-sat/" style="font-size: 16.5px; color: #888">2-sat</a> <a href="/tags/AC自动机/" style="font-size: 14px; color: #999">AC自动机</a> <a href="/tags/Burnside引理/" style="font-size: 14px; color: #999">Burnside引理</a> <a href="/tags/FFT/" style="font-size: 19px; color: #777">FFT</a> <a href="/tags/LCT/" style="font-size: 16.5px; color: #888">LCT</a> <a href="/tags/NTT/" style="font-size: 16.5px; color: #888">NTT</a> <a href="/tags/Trie/" style="font-size: 14px; color: #999">Trie</a> <a href="/tags/bfs/" style="font-size: 14px; color: #999">bfs</a> <a href="/tags/manachar/" style="font-size: 16.5px; color: #888">manachar</a> <a href="/tags/trie/" style="font-size: 14px; color: #999">trie</a> <a href="/tags/三分/" style="font-size: 14px; color: #999">三分</a> <a href="/tags/主席树/" style="font-size: 16.5px; color: #888">主席树</a> <a href="/tags/二分图/" style="font-size: 14px; color: #999">二分图</a> <a href="/tags/二分答案/" style="font-size: 16.5px; color: #888">二分答案</a> <a href="/tags/二次函数/" style="font-size: 14px; color: #999">二次函数</a> <a href="/tags/任意长度FFT/" style="font-size: 14px; color: #999">任意长度FFT</a> <a href="/tags/优先队列/" style="font-size: 14px; color: #999">优先队列</a> <a href="/tags/决策单调性/" style="font-size: 14px; color: #999">决策单调性</a> <a href="/tags/凸包维护/" style="font-size: 14px; color: #999">凸包维护</a> <a href="/tags/动态规划/" style="font-size: 14px; color: #999">动态规划</a> <a href="/tags/区间dp/" style="font-size: 14px; color: #999">区间dp</a> <a href="/tags/单调栈/" style="font-size: 14px; color: #999">单调栈</a> <a href="/tags/单调队列/" style="font-size: 14px; color: #999">单调队列</a> <a href="/tags/博弈论/" style="font-size: 14px; color: #999">博弈论</a> <a href="/tags/后缀数组/" style="font-size: 16.5px; color: #888">后缀数组</a> <a href="/tags/后缀树/" style="font-size: 14px; color: #999">后缀树</a> <a href="/tags/后缀自动机/" style="font-size: 21.5px; color: #666">后缀自动机</a> <a href="/tags/多项式/" style="font-size: 21.5px; color: #666">多项式</a> <a href="/tags/定理/" style="font-size: 14px; color: #999">定理</a> <a href="/tags/容斥/" style="font-size: 14px; color: #999">容斥</a> <a href="/tags/容斥原理/" style="font-size: 14px; color: #999">容斥原理</a> <a href="/tags/对偶图/" style="font-size: 14px; color: #999">对偶图</a> <a href="/tags/循环节/" style="font-size: 14px; color: #999">循环节</a> <a href="/tags/性质/" style="font-size: 14px; color: #999">性质</a> <a href="/tags/拉格朗日插值/" style="font-size: 16.5px; color: #888">拉格朗日插值</a> <a href="/tags/搞/" style="font-size: 19px; color: #777">搞</a> <a href="/tags/数学期望/" style="font-size: 14px; color: #999">数学期望</a> <a href="/tags/数形转换/" style="font-size: 14px; color: #999">数形转换</a> <a href="/tags/数论/" style="font-size: 14px; color: #999">数论</a> <a href="/tags/斜率优化/" style="font-size: 14px; color: #999">斜率优化</a> <a href="/tags/最小字典序二分图匹配/" style="font-size: 14px; color: #999">最小字典序二分图匹配</a> <a href="/tags/最小生成树/" style="font-size: 14px; color: #999">最小生成树</a> <a href="/tags/最短路/" style="font-size: 14px; color: #999">最短路</a> <a href="/tags/杜教筛/" style="font-size: 14px; color: #999">杜教筛</a> <a href="/tags/染色/" style="font-size: 14px; color: #999">染色</a> <a href="/tags/树上动规/" style="font-size: 14px; color: #999">树上动规</a> <a href="/tags/树形dp/" style="font-size: 21.5px; color: #666">树形dp</a> <a href="/tags/树状数组/" style="font-size: 21.5px; color: #666">树状数组</a> <a href="/tags/树链剖分/" style="font-size: 14px; color: #999">树链剖分</a> <a href="/tags/概率/" style="font-size: 14px; color: #999">概率</a> <a href="/tags/模拟/" style="font-size: 14px; color: #999">模拟</a> <a href="/tags/点分治/" style="font-size: 14px; color: #999">点分治</a> <a href="/tags/状压dp/" style="font-size: 14px; color: #999">状压dp</a> <a href="/tags/第二类斯特林数/" style="font-size: 14px; color: #999">第二类斯特林数</a> <a href="/tags/线性筛/" style="font-size: 16.5px; color: #888">线性筛</a> <a href="/tags/线段树/" style="font-size: 19px; color: #777">线段树</a> <a href="/tags/线段树合并/" style="font-size: 14px; color: #999">线段树合并</a> <a href="/tags/组合数学/" style="font-size: 24px; color: #555">组合数学</a> <a href="/tags/网络流/" style="font-size: 16.5px; color: #888">网络流</a> <a href="/tags/自然数幂和/" style="font-size: 14px; color: #999">自然数幂和</a> <a href="/tags/莫比乌斯反演/" style="font-size: 21.5px; color: #666">莫比乌斯反演</a> <a href="/tags/计数dp/" style="font-size: 19px; color: #777">计数dp</a> <a href="/tags/调和级数/" style="font-size: 14px; color: #999">调和级数</a> <a href="/tags/贪心/" style="font-size: 14px; color: #999">贪心</a> <a href="/tags/费用流/" style="font-size: 14px; color: #999">费用流</a> <a href="/tags/链表/" style="font-size: 14px; color: #999">链表</a> <a href="/tags/长链剖分/" style="font-size: 14px; color: #999">长链剖分</a>
+    </div>
+  </section>
+
+
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:482933891@qq.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/Ratexxxx/"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+  <div>
+    Use
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    as theme
+    
+      , 
+      total visits
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      times
+    
+    . 
+  </div>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('.cover') {
+          $('.cover').backstretch(
+          ["https://img.vim-cn.com/29/91197b04c13f512f734a76d4ac422d89dbe229.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://img.vim-cn.com/29/91197b04c13f512f734a76d4ac422d89dbe229.jpg"],
+          {
+            duration: "6000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0.5/js/volantis.min.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'false' == true;
+  var verify = 'false' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "dEkbdb7HifiA6NKf8eT0qGe4-gzGzoHsz",
+    appKey: "L8KCnhJjBGbQsOJOI6pbRFj0",
+    placeholder: "快来评论吧~",
+    pageSize:'20',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.8/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.8/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "Copied";
+  let COPY_FAILURE = "Copy failed";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+  <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>
+  <!-- <script src="https://g.joyinshare.com/hc/piao.js" type="text/javascript"></script> -->
+</body>
+</html>

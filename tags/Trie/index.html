@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: trie | Ratexxxx</title>
+  <title>Tag: Trie | Ratexxxx</title>
   
   
   <meta name="description" content="可以的">
@@ -247,8 +247,8 @@
       
         
   <h2 class="title">
-    <a href="/2019/07/12/BZOJ3926-Zjoi2015-诸神眷顾的幻想乡/">
-      BZOJ3926 [Zjoi2015]诸神眷顾的幻想乡
+    <a href="/2019/09/11/BZOJ1212-HNOI2004-L语言/">
+      BZOJ1212 [HNOI2004]L语言
     </a>
   </h2>
 
@@ -276,7 +276,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-07-12</p>
+    <p>2019-09-11</p>
   </a>
 </div>
 
@@ -286,9 +286,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/categories/字符串/后缀自动机/' rel="nofollow">
+    <a href='/categories/字符串/Trie/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>字符串&nbsp;/&nbsp;后缀自动机</p>
+      <p>动态规划&nbsp;/&nbsp;数据结构优化&nbsp;/&nbsp;字符串&nbsp;/&nbsp;Trie</p>
     </a>
   </div>
 
@@ -316,12 +316,12 @@
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
       <blockquote>
-<p>题目链接：<a href="https://www.lydsy.com/JudgeOnline/problem.php?id=3926" target="_blank" rel="noopener">BZOJ3926</a></p>
+<p>题目链接：<a href="https://www.lydsy.com/JudgeOnline/problem.php?id=1212" target="_blank" rel="noopener">BZOJ1212</a></p>
 </blockquote>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>20min 1A庆祝一下<br>国家队论文写过一个trie上SAM的科技<br>其实可以类比广义后缀自动机加入多个串，trie树上无非是每个点插入前将las移到其父亲对应的节点<br>本题由于叶子不超过20个，以每个叶子为根，分别遍历一遍trie，全部加入一个广义自动机中，累计每个节点的max-min+1即可<br>由于所有有向路径都可以看成以一个叶子为根的一个直的路径（也就是trie上的“子串”），因此正确性可以保证<br>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>我最开始竟然往AC自动机上想。。。<br>实际上就是一个1D1D的dp<br>如果一个前缀可以，那么在后面接一个单词后形成的前缀仍然可以<br>用trie树加速接单词的过程，把所有单词建成trie，用文章在上面走，走到一个endpos该位置就可以，dp即可<br>
       
         <div class="readmore">
-          <a href="/2019/07/12/BZOJ3926-Zjoi2015-诸神眷顾的幻想乡/" class="flat-box">
+          <a href="/2019/09/11/BZOJ1212-HNOI2004-L语言/" class="flat-box">
             <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
             Read More
           </a>
@@ -331,9 +331,9 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/tags/后缀自动机/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>后缀自动机</a>
+          <a href="/tags/Trie/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Trie</a>
         
-          <a href="/tags/trie/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>trie</a>
+          <a href="/tags/动态规划/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>动态规划</a>
         
       </div>
     
@@ -672,8 +672,6 @@
           <li><a class="flat-box child" title="/categories/数据结构/长链剖分/" href="/categories/数据结构/长链剖分/"><div class='name'>长链剖分</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box" title="/categories/注意点/" href="/categories/注意点/"><div class='name'>注意点</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/百合丛中过/" href="/categories/百合丛中过/"><div class='name'>百合丛中过</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box" title="/categories/纪念日/" href="/categories/纪念日/"><div class='name'>纪念日</div><div class='badge'>(1)</div></a></li>
         
